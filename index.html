@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Weather Forecast</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg py-5">
+                <div class="container ">
+                    <a class="navbar-brand d-flex" href="#">
+                        <img src="images/logo.png" alt="logo">
+                        <div class="ms-2 text-white">
+                            <p class="fw-bold mb-1">Weather</p>
+                            tagline goes here
+                        </div>
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">News</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Live Cameras</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Photos</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="overflow-auto">
+
+            <div class="container mt-5">
+                <div class="input-group">
+                    <input type="text" class="form-control px-3 py-3 rounded-5 border-0 dark-mode-input" placeholder="Find your Location..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-button-color px-5 rounded-5" type="button" id="button-addon2">Find</button>
+                </div>
+
+                <div class="spinner d-flex flex-column align-items-center my-5 px-3">
+                    <div><span class="loader"></span></div>
+                    <div class="alert alert-danger">Allow Please to display the forecast for today and the coming 2 days..</div>
+                </div>
+
+                <div class="d-none row forecast-container my-5 px-3">
+                    <div class="forecast col-lg-4">
+                        <div class="inner">
+                            <div class="forecast-date d-flex justify-content-between">
+                                <h6 class="dayName">Saturday</h6>
+                                <h6 class="toDayDate">1mar</h6>
+                            </div>
+                            <div class="forecast-content px-3 py-4">
+                                <h3 class="location h5">Toukh</h3>
+                                <h3 class="degree main_degree text-white">31.2<sup>o</sup>C</h3>
+                                <img class="stateImg" src="images/113.webp" width="90" alt="forecast-state-icon">
+                                <h6 class="custom my-3">Sunny</h6>
+                                <ul class="list-unstyled d-flex">
+                                    <li class=""><img src="images/icon-umberella.png" alt="icon-umberella"> <span>20%</span></li>
+                                    <li class="ms-4"><img src="images/icon-wind.png" alt="icon-wind"> <span>18km/h</span></li>
+                                    <li class="ms-4"><img src="images/icon-compass.png" alt="icon-compass"> <span>East</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="forecast col-lg-4">
+                        <div class="inner">
+                            <div class="forecast-date">
+                                <h6 class="dayName text-center">Saturday</h6>
+                            </div>
+                            <div class="forecast-content d-flex flex-column align-items-center px-3 py-5">
+                                <div class="mb-3">
+                                    <img class="stateImg" src="images/113.webp" width="48" alt="forecast-state-icon">
+                                </div>
+                                <h4 class="main_degree text-white">31.2<sup>o</sup>C</h4>
+                                <h6 class="min_degree">28.2<sup>o</sup></h6>
+                                <h6 class="custom my-3">Sunny</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="forecast col-lg-4">
+                        <div class="inner">
+                            <div class="forecast-date">
+                                <h6 class="dayName text-center">Saturday</h6>
+                            </div>
+                            <div class="forecast-content d-flex flex-column align-items-center px-3 py-5">
+                                <div class="mb-3">
+                                    <img class="stateImg" src="images/113.webp" width="48" alt="forecast-state-icon">
+                                </div>
+                                <h4 class="main_degree text-white">31.2<sup>o</sup>C</h4>
+                                <h6 class="min_degree">28.2<sup>o</sup></h6>
+                                <h6 class="custom my-3">Sunny</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="container py-5">
+                <div class="row justify-content-between">
+                    <div class="col-md-8 mb-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control px-3 py-3 rounded-5 border-0 dark-mode-input" placeholder="Enter your email to subscribe..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-button-color px-3 rounded-5" type="button" id="button-addon2">Subscribe</button>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled d-flex m-0 col-md-4 justify-content-md-center">
+                        <li class="d-flex justify-content-center align-items-center"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li class="d-flex justify-content-center align-items-center ms-2"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="d-flex justify-content-center align-items-center ms-2"><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                        <li class="d-flex justify-content-center align-items-center ms-2"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>
+                        Copyright 2014 Company name. Designed by Themezy. All rights reserved
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
